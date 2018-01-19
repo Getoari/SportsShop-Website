@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html manifest="cache.appcache">
+<head>
+	<title>ALL-IN SPORTS Shop</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Online Sports Shop">
+	<meta name="keywords" content="Nike,Adidas,Puma,Football Cleats,Basketball Shoes,Football Socks,Running Shoes,Football balls,Basketball balls,Accessories ">
+	<meta name="Author" content="Arber Emini,Kujtim Hamiti,Getoar Gaxherri,Begatim Lekaj">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="../JQuery/sticy_menu.js"></script>
+	<script src="../JQuery/dropdown_effect.js"></script>
+	<script src="../Javascript/changeBgTimer.js"></script>
+	<!--        
+        font-family: 'Lato', sans-serif;
+        font-family: 'Source Sans Pro', sans-serif;   
+    -->
+	
+	<script type="text/javascript">
+		// JS Object and Constructor
+		function developer(first, last, age, city) {
+			this.firstName = first;
+			this.lastName = last;
+			this.age = age;
+			this.city = city;
+			this.fullName = function () {
+				return this.firstName + " " + this.lastName;
+			};
+		}
+		var dev1 = new developer("Arber", "Emini", 20, "Mitrovice");
+		var dev2 = new developer("Getoar", "Gaxherri", 22, "Junik");
+		var dev3 = new developer("Begatim", "Lekaj", 20, "Decan");
+		var dev4 = new developer("Kujtim", "Hamiti", 20, "Podujeve");
+		
+		
+		window.onload = function() {
+			document.getElementById("dev1").innerHTML = dev1.fullName();
+			document.getElementById("dev2").innerHTML = dev2.fullName();
+			document.getElementById("dev3").innerHTML = dev3.fullName();
+			document.getElementById("dev4").innerHTML = dev4.fullName();
+		}		
+	</script>
+	<link rel="stylesheet" type="text/css" href="../CSS/contact.css"> 
+</head>
+<body onload="changeBgTimer()">
+	<!--~~~~~~~~~~~~~~~~~~~~~~~Header~~~~~~~~~~~~~~~~~~~~-->
+	<header class="background_t">
+	<div id="login_menu">
+		<p><a href="login.html" ><span class="login-btn">Login</span></a> | <a href="register.html"><span class="login-btn">Register</span></a></p>
+	</div>
+	<a href="Index.html"><img  id="logo" src="../Images/logo.png" alt="logo" /></a>		
+	<form id="search">
+		<div id="searchbardiv">
+			<input id="searchbar" type="search" name="Search" placeholder="Search">
+			<input id="searchbutton" type="button" name="Search" value="Search"> 
+		</div>
+	</form>
+	</header>
+	<!--~~~~~~~~~~~~~~~~~~~~MENU~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+	<nav class="background_t">
+		<div id="menudiv">
+			<ul>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li><a href="Index.html">Home</a></li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li class="dropdown">
+					<a href="#0">Football</a>
+					<ul class="sub-menu">
+						<li class="dropdown">
+							<a href="#0">Shoes</a>
+							<ul class="sub-menu">
+								<li><a href="football_shoes_addidas.html">Adidas</a></li>
+								<li><a href="football_shoes_nike.html">Nike</a></li>
+								<li><a href="football_shoes_puma.html">Puma</a></li>
+							</ul>
+						</li>
+						<li> <a href="football_kits.html">Kits</a> </li>
+						<li> <a href="football_accessories.html">Accessories</a></li>
+						<li> <a href="football_balls.html">Balls</a> </li>
+					</ul>
+				</li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li class="dropdown">
+					<a href="#0">Basketball</a>
+					<ul class="sub-menu">
+						<li class="dropdown">
+							<a href="#0">Shoes</a>
+							<ul class="sub-menu"> 
+								<li><a href="baketball_shoes_addidas.html">Adidas</a></li>
+								<li><a href="basketball_shoes_nike.html">Nike</a></li>
+								<li><a href="basketball_shoes_and1.html">AND1</a></li>
+							</ul>
+						</li>
+						<li><a href="basketball_jersyes.html">Jersyes</a></li>
+						<li><a href="basketball_accessories.html">Accessories</a></li>
+						<li><a href="basketball_balls.html">Balls</a></li>
+					</ul>
+				</li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li class="dropdown">
+					<a href="#0">Running</a>
+					<ul class="sub-menu">
+						<li class="dropdown">
+							<a href="#0">Shoes</a>
+							<ul class="sub-menu">
+								<li><a href="running_shoes_addidas.html">Adidas</a></li>
+								<li><a href="running_shoes_nike.html">Nike</a></li>
+								<li><a href="running_shoes_puma.html">Puma</a></li>
+							</ul>
+						</li>
+						<li><a href="running_shorts.html">Shorts</a></li>
+						<li><a href="running_t-shirts.html">T-Shirts</a></li>
+						<li><a href="running_accessories.html">Accessories</a></li>
+					</ul>
+				</li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li class="dropdown">
+					<a href="#0">Supplements</a>
+					<ul class="sub-menu">
+						<li><a href="supplements_whey_proteins.html">Whey Proteins</a></li>
+						<li><a href="supplements_mass_gainer.html">Mass Gainers</a></li>
+						<li><a href="supplements_creatine.html">Creatine</a></li>
+					</ul>
+				</li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li><a href="equipments.html">Equipments</a></li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li><a href="discounts.html">Discounts</a></li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+			</ul>
+		</div>
+	</nav>
+	<!--~~~~~~~~~~~~~~~Content~~~~~~~~~~~~~~~~~-->
+	<div id="content">
+		<div id="contact">
+			<address>
+				<h1 id="border_img"><font face="verdana" size="6" color="black">Contact<span id="demo"></span></font></h1>
+				
+				<p>Bregu i Diellit, p.n.</p>
+				<p>10000 Prishtin&euml;, Republika e Kosov&euml;s</p>
+				<br/>
+				<p><b>Tel.:</b> <i>+381(0)38 554 896 ext.102</i></p>
+				<p><strong>Fax:</strong> <i>+381(0)38 542 525</i></p>
+				<p><strong>E-mail:</strong> <u><a href="mailto:webmaster@sportshop.com">webmaster@sportshop.com</a></u></p>
+				<p>
+					<a href="http://fb.com" target="_blank"><img height="40px" width="40px" src="../Images/Social/facebook.png" alt="facebook" /></a>
+					<a href="http://twitter.com" target="_blank"><img height="40px" width="40px" src="../Images/Social/twitter.png" alt="twitter" /></a>
+					<a href="http://plus.google.com" target="_blank"><img height="40px" width="40px" src="../Images/Social/google_plus.png" alt="google plus" /></a>
+				</p>
+			</address>
+			<form id="contact_form" onsubmit="return validateForm()">
+					<label>Name:</label>
+					<input type="text" id="name" name="sender" placeholder="Enter name">
+					<label>E-Mail:</label>
+					<input type="text" id="email" name="sender_e-mail" placeholder="Enter e-mail">
+					<label>Subject:</label>
+					<input type="text" name="subject" id="subject" placeholder="Enter subject">
+					<label>Message:</label>
+					<textarea placeholder="Write your message here"></textarea>
+				<input id="submit" type="submit" value="Submit"> 
+			</form>
+			<script>
+				function validateForm() {
+				var array = ["name","email","subject"];
+					for(var i = 0; i<array.length; i++) {
+						var x = document.forms["contact_form"][array[i]].value;
+						if (x == "") {
+							alert(array[i] + " must be filled out!");
+							return false;
+						}
+					}
+				}
+			</script>
+			<div id="keyframe_rectangle"></div>
+		</div>
+		<div>
+			<h1 id="members_text">Staff Members</h1>
+			<table>
+				<tr>
+					<td class="member_container">
+						<img class="member_picture" src="../Images/Staff/getoar.png" height="250px" width="250px" alt="fist_member" />
+						<h2 id="dev1">AE</h2>
+						<h3>Web Developer/Designer</h3>
+					</td>
+					<td class="member_container">
+						<img class="member_picture" src="../Images/Staff/getoar.png" height="250px" width="250px" alt="second_member" />
+						<h2 id="dev2">GG</h2>
+						<h3>Web Developer/Designer</h3>
+					</td>
+					<td class="member_container">
+						<img class="member_picture" src="../Images/Staff/getoar.png" height="250px" width="250px" alt="forth_member" />
+						<h2 id="dev4">BL</h2>
+						<h3>Web Developer/Designer</h3>
+					</td>
+					<td class="member_container">
+						<img class="member_picture" src="../Images/Staff/getoar.png" height="250px" width="250px" alt="third_member" />
+						<h2 id="dev3">KH</h2>
+						<h3>Web Developer/Designer</h3>
+					</td>
+					
+				</tr>
+			</table>
+			<h3 style="text-align: left;">Suggestions:</h3>
+			<p>1. Rate us:</p>
+			<form oninput="x.value=parseInt(a.value)">0
+			<input type="range" id="a" value="50">100
+			= <output name="x" for="a b"></output>%
+			</form>
+			
+			<!------ Datalist ------>
+			<p>2. What do you think is most important phase while building a website?</p>
+			<form action="action_page.php" >
+				<!------ 'List' Attribute ------>
+				<input list="suggestions" name="suggestion">
+				<datalist id="suggestions">
+					<option value="Information Gathering">
+					<option value="Planning">
+					<option value="Design">
+					<option value="Development">
+					<option value="Testing and Delivery">
+					<option value="Maintenance">
+				</datalist><br/><br/>
+			</form>
+			<!------ Throw Try Catch ------>
+			<p>3.Let's play a guess game. Write a number!</p>
+			<input id="your_age" type="text"><br/>
+			<button type="button" onclick="throwTryCatch()">Guess!</button>	
+			<script>
+				function throwTryCatch() {
+					var message, x;
+					x = document.getElementById("your_age").value;
+					try { 
+						if(x == "")  throw "Write a number!";
+						// NaN Javascript text manipulation
+						if(isNaN(x)) throw "That is not a number!";
+						x = Number(x);
+						if(x == 3.14) throw "I think that's supossed to be the constant PI";
+						if(x == 2.71) throw "I think that's supossed to be Euler's number";
+						if(x > 16 && x < 35 && x % 1 === 0) throw "Is that your age?";
+						if(x > 0  && x < 15 && x % 1 === 0) throw "Is that your favorite number?";
+					}
+					catch(err) {
+						alert(err);
+					}
+				}
+			</script>
+			<input id="submit" type="submit" style=" float:none; display: block; margin: 30px 5px;">
+			<!-------- Audio -------->
+			<audio controls autoplay loop>
+			  <source src="../Audio/epic_street_workout.mp3" type="audio/mpeg" \>
+			Your browser does not support the audio element.
+			</audio>
+		</div>	
+	</div>
+	<!--~~~~~~~~~~~~~~~Footer~~~~~~~~~~~~~~~~~-->
+	<footer> 
+		<div id="footer_bottom">
+			<p>Copyright &copy; Sports Shop. Designated trademarks and brands are the property of their respective owners. <span id="date"></span></p>
+		</div>
+		<script>
+				document.getElementById("date").innerHTML = Date();
+		</script>
+	</footer>
+	<!-- JQuery callback effect -->
+	<script>
+		$( "#footer_bottom p" ).mouseover(function() {
+			$( "#footer_bottom p" ).hide("fast",function(){
+				$( "#footer_bottom p" ).show("fast")});
+		});
+	</script>
+</body
+
+</html>

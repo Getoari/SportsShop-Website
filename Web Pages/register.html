@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html manifest="cache.appcache">
+<head>
+	<title>ALL-IN SPORTS Shop</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Online Sports Shop">
+	<meta name="keywords" content="Nike,Adidas,Puma,Football Cleats,Basketball Shoes,Football Socks,Running Shoes,Football balls,Basketball balls,Accessories ">
+	<meta name="Author" content="Arber Emini,Kujtim Hamiti,Getoar Gaxherri,Begatim Lekaj">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="../JQuery/sticy_menu.js"></script>
+	<script src="../JQuery/dropdown_effect.js"></script>
+	<script src="../Javascript/changeBgTimer.js"></script>
+	<!--        
+        font-family: 'Lato', sans-serif;
+        font-family: 'Source Sans Pro', sans-serif;   
+    -->
+	<link rel="stylesheet" type="text/css" href="../CSS/content.css"> </head>
+<body onload="changeBgTimer()">
+	<!--~~~~~~~~~~~~~~~~~~~~~~~Header~~~~~~~~~~~~~~~~~~~~-->
+	<header class="background_t">
+		<div id="login_menu">
+			<p><a href="login.html"><span class="login-btn">Login</span></a> | <a href="register.html"><span class="login-btn">Register</span></a></p>
+		</div>
+		<a href="Index.html"><img id="logo" src="../Images/logo.png" alt="logo" /></a>
+		<form id="search">
+			<div id="searchbardiv">
+				<input id="searchbar" type="search" name="Search" placeholder="Search">
+				<input id="searchbutton" type="button" name="Search" value="Search"> </div>
+		</form>
+	</header>
+	<!--~~~~~~~~~~~~~~~~~~~~MENU~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+	<nav class="background_t">
+		<div id="menudiv">
+			<ul>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li><a href="Index.html">Home</a></li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li class="dropdown">
+					<a href="#0">Football</a>
+					<ul class="sub-menu">
+						<li class="dropdown">
+							<a href="#0">Shoes</a>
+							<ul class="sub-menu">
+								<li><a href="football_shoes_addidas.html">Adidas</a></li>
+								<li><a href="football_shoes_nike.html">Nike</a></li>
+								<li><a href="football_shoes_puma.html">Puma</a></li>
+							</ul>
+						</li>
+						<li> <a href="football_kits.html">Kits</a> </li>
+						<li> <a href="football_accessories.html">Accessories</a></li>
+						<li> <a href="football_balls.html">Balls</a> </li>
+					</ul>
+				</li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li class="dropdown">
+					<a href="#0">Basketball</a>
+					<ul class="sub-menu">
+						<li class="dropdown">
+							<a href="#0">Shoes</a>
+							<ul class="sub-menu"> 
+								<li><a href="baketball_shoes_addidas.html">Adidas</a></li>
+								<li><a href="basketball_shoes_nike.html">Nike</a></li>
+								<li><a href="basketball_shoes_and1.html">AND1</a></li>
+							</ul>
+						</li>
+						<li><a href="basketball_jersyes.html">Jersyes</a></li>
+						<li><a href="basketball_accessories.html">Accessories</a></li>
+						<li><a href="basketball_balls.html">Balls</a></li>
+					</ul>
+				</li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li class="dropdown">
+					<a href="#0">Running</a>
+					<ul class="sub-menu">
+						<li class="dropdown">
+							<a href="#0">Shoes</a>
+							<ul class="sub-menu">
+								<li><a href="running_shoes_addidas.html">Adidas</a></li>
+								<li><a href="running_shoes_nike.html">Nike</a></li>
+								<li><a href="running_shoes_puma.html">Puma</a></li>
+							</ul>
+						</li>
+						<li><a href="running_shorts.html">Shorts</a></li>
+						<li><a href="running_t-shirts.html">T-Shirts</a></li>
+						<li><a href="running_accessories.html">Accessories</a></li>
+					</ul>
+				</li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li class="dropdown">
+					<a href="#0">Supplements</a>
+					<ul class="sub-menu">
+						<li><a href="supplements_whey_proteins.html">Whey Proteins</a></li>
+						<li><a href="supplements_mass_gainer.html">Mass Gainers</a></li>
+						<li><a href="supplements_creatine.html">Creatine</a></li>
+					</ul>
+				</li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li><a href="equipments.html">Equipments</a></li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li><a href="discounts.html">Discounts</a></li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+			</ul>
+		</div>
+	</nav>
+	<!--~~~~~~~~~~~~~~~Content~~~~~~~~~~~~~~~~~-->
+	<div id="content">
+		<canvas id="canvasText" width="200" height="100" style="margin: auto; display: block;"></canvas>
+		<script>
+			// Stroke Text
+			var c = document.getElementById("canvasText");
+			var ctx = c.getContext("2d");
+			ctx.font = "36px Arial";
+			ctx.strokeText("Sign Up",70,50);
+			// Triangle
+			ctx.beginPath();
+			ctx.moveTo(10,10);
+			ctx.lineTo(35,55);
+			ctx.lineTo(60,10);
+			ctx.fill();
+			// Circle
+			ctx.beginPath();
+			ctx.arc(35,25,20,0,2*Math.PI);
+			ctx.stroke();
+		</script>
+		<!--- Validation froms -->
+		<script>
+			function validateForm() {
+				// Validate Name, Email, Password
+				var array = ["name","email","password"];
+				
+				for(var i = 0; i<array.length; i++) {
+					var x = document.forms["register_form"][array[i]].value;
+					if (x == "") {
+						alert(array[i] + " must be filled out!");
+						jumpTo(array[i]);
+						return false;
+					}
+				}
+				
+				// Validate checkbox
+				var elementRequired = document.querySelectorAll(".checkbox")
+				var elementChecked = 0;
+				for (var i = 0; i < elementRequired.length; i++) {
+						if(elementRequired[i].checked)
+							elementChecked++;
+				}
+				if(elementChecked == 0) {
+					alert("Please check at least check one checkbox!");
+					jumpTo("interest");
+					return false;
+				}
+				
+				// Radio Validate
+				var radio = document.getElementsByName("user_age");
+				if( radio[0].checked != true && radio[1].checked != true ) {
+					alert("Please choose your age!");
+					jumpTo("age");
+					return false;
+				}
+					
+				function jumpTo(anchor){
+					window.location.href = "#"+anchor;
+				}
+			}
+		</script>
+		<!-- form has 'autocomplete' turn on -->
+		<form name="register_form" action="register.php" method="post" onsubmit="return validateForm()" autocomplete="on">
+			<img src="../Images/signup.png" id="sign_up_icon" alt="sign up" style="display: none;"/>
+			<fieldset>
+				<legend><span class="number">1</span>Your basic info</legend>
+				<label for="name">Name:</label>
+				<!-- Name has 'autofocus' -->
+				<input type="text" id="name" name="user_name" autofocus>
+				<!-- Users can add 'multiple' e-mail's -->
+				<label for="email" multiple>Email:</label>
+				<input type="email" id="email" name="user_email">
+				<label for="country_code">County Code:</label>
+				<!-- Country code is a two letter 'pattern' for an example see the 'placeholder' -->
+				<input type="text" id="country code" name="user_country" pattern="[A-Za-z]{2}" title="Two letter country code" placeholder="KS">
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="user_password" autocomplete="off">
+				<label id="age">Age:</label>
+				<input type="radio" id="under_13" value="under_13" name="user_age">
+				<label for="under_13" class="light">Under 13</label>
+				<br>
+				<input type="radio" id="over_13" value="over_13" name="user_age">
+				<label for="over_13" class="light">13 or older</label>
+			</fieldset>
+			<fieldset>
+				<legend><span class="number">2</span>Your profile</legend>
+				<label for="bio">Biography:</label>
+				<!-- Biography does 'not' require to be 'validated', 'height' and 'width' attributes -->
+				<textarea id="bio" name="user_bio" novalidate height="100" width="200"></textarea>
+			</fieldset>
+			<fieldset>
+				<label for="job">Job Role:</label>
+				<select id="job" name="user_job">
+					<optgroup label="Web">
+						<option value="frontend_developer">Front-End Developer</option>
+						<option value="php_developor">PHP Developer</option>
+						<option value="python_developer">Python Developer</option>
+						<option value="rails_developer"> Rails Developer</option>
+						<option value="web_designer">Web Designer</option>
+						<option value="WordPress_developer">WordPress Developer</option>
+					</optgroup>
+					<optgroup label="Mobile">
+						<option value="Android_developer">Androild Developer</option>
+						<option value="iOS_developer">iOS Developer</option>
+						<option value="mobile_designer">Mobile Designer</option>
+					</optgroup>
+					<optgroup label="Business">
+						<option value="business_owner">Business Owner</option>
+						<option value="freelancer">Freelancer</option>
+					</optgroup>
+					<optgroup label="Other">
+						<option value="secretary">Secretary</option>
+						<option value="maintenance">Maintenance</option>
+					</optgroup>
+				</select>
+				<label id="interest">Interests:</label>
+				<input type="checkbox" id="development" value="interest_development" name="interests" class="checkbox">
+				<label class="light" for="development">Development</label>
+				<br>
+				<input type="checkbox" id="design" value="interest_design" name="interests" class="checkbox">
+				<label class="light" for="design">Design</label>
+				<br>
+				<input type="checkbox" id="business" value="interest_business" name="interests" class="checkbox">
+				<label class="light" for="business">Business</label>
+			</fieldset>
+			<button type="submit">Sign Up</button>
+		</form>
+		<canvas id="myCanvas" width="800" height="100" style="margin-top:50px;" ></canvas>
+		<p><button onclick="myCanvas()">Click here to see a Hidden Picture!</button></p>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+
+			// Gradient
+			var grd = ctx.createLinearGradient(0,0,800,0);
+			grd.addColorStop(0,"lightblue");
+			grd.addColorStop(1,"white");
+			ctx.fillStyle = grd;
+			ctx.fillRect(10,10,800,80);
+			// Image
+			function myCanvas() {
+				var c = document.getElementById("myCanvas");
+				var ctx = c.getContext("2d");
+				var img = document.getElementById("sign_up_icon");
+				ctx.drawImage(img,10,10);
+			}
+		</script>
+		<svg width="800" height="100">
+			<!-- SVG Circle -->
+			<circle cx="50" cy="50" r="40" stroke="blue" stroke-width="4" fill="lightblue" />
+			<!-- SVG Rounded Rectangle -->
+			<rect x="150" y="15" rx="10" ry="10" width="150" height="70"
+			style="fill:red;stroke:black;stroke-width:5;" />
+		</svg>
+	</div>
+	<!--~~~~~~~~~~~~~~~Footer~~~~~~~~~~~~~~~~~-->
+	<footer>
+		<div id="footer_bottom">
+			<p>Copyright &copy; Sports Shop. Designated trademarks and brands are the property of their respective owners. <span id="date"></span></p>
+		</div>
+		<script>
+				document.getElementById("date").innerHTML = Date();
+		</script>
+	</footer>
+</body>
+
+</html>

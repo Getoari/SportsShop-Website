@@ -1,0 +1,305 @@
+/*_________HEADER___________*/
+header {
+	display: block;
+	z-index: -2;
+	height: 172px;
+	background: #1a2329;
+	padding: 0px;
+}
+html,body {
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0;
+	margin-top: 87px;
+	background-image: url(../Images/smbg.png);
+	background-repeat: x;
+	background-attachment: fixed;
+	background-position: left;
+}
+
+@font-face {
+    font-family: WebFont;
+    src: url(../Fonts/Lato-Regular.ttf);
+}
+
+img{
+	z-index: 0;
+	display:inline-flex; 
+}
+
+#logo {
+	position: relative;
+	float: left;
+	padding: 10px 0px 10px 15px;
+	
+}
+
+#login_menu {
+	color: white;
+	padding: 0;
+	text-align: center;
+	margin-right: 100px;
+	width: 180px;
+	height: 50px;
+	float: right;
+	background-color: #1a2329;
+	border-radius: 15px 15px 15px 15px;
+	border: 1px;
+	border-color: #0188ae;
+	border-style: solid;
+	margin-top: 10px;
+}
+
+.login-btn {
+	color: white;
+	font-weight: bolder;
+	
+}
+
+#login-btn:hover {
+	color: cornflowerblue;
+	font-weight: bolder;
+	text-decoration: underline
+}
+
+#searchbar {
+	position:relative;
+	height: 40px;
+	width: 200px;
+	margin: 5px 5px;
+}
+
+#searchbutton {
+	position:relative;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	background-color: #1a2329;
+	border-radius: 10px 10px 10px 10px;
+	color: cornflowerblue;
+	height: 40px;
+	width: 70px;
+}
+
+#searchbardiv {
+	position: relative;
+	padding-bottom: 0;
+	margin: 10px 10px;
+	background: transparent;
+	height: 50px;
+	width: 290px;
+}
+
+#search {
+	float: right;
+	padding: 10px;
+	margin: 10px 10px;
+	background: transparent;
+	clear: right;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*~~~~~~~~~~~~MAIN MENU~~~~~~~~~~~~~~~~~ */
+
+header,
+.main-nav-scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+
+
+nav {
+	margin-bottom: -80px;
+	position: relative;
+	float: left;
+	z-index: +3;
+	display: block;
+	color: #d8d8da;
+	background: #1a2329;
+	height: 60px;
+	width: 100%;
+	margin: 0; 
+	box-shadow: 0px 0px 0px 2px #0188ae;
+}
+
+#menudiv {
+	width: 1006px;
+	padding-left: 30px;
+	margin: 0 auto;
+	background-color: #1a2329;
+	height: auto;
+}
+
+nav ul {
+	list-style: none;
+	height: auto;
+	padding: 0;
+	margin: 0;
+	color: #d8d8da;
+	background: #1a2329;
+}
+
+nav div > ul > li {
+	float: left;
+}
+
+nav ul li {
+	display: block;
+	vertical-align: middle;
+	height: 60px;
+	vertical-align: center;
+	color: #d8d8da;
+	white-space: nowrap;
+}
+
+nav li ul {
+	display: block;
+	position: absolute;
+}
+
+nav ul li a {
+	display: block;
+	margin-top: 3px;
+	padding: 0.7em;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	font-size: 21px;
+	color: #d8d8da;
+}
+
+nav ul.sub-menu {
+    display:none;
+}
+
+nav ul:hover a {
+	color: #d8d8da;
+}
+
+nav ul li a:hover {
+	color: #0188ae;
+}
+
+
+li:hover li {
+	float: none;
+}
+
+nav li:hover a {
+	color: white;
+}
+
+nav li:hover li a:hover {
+	color: #01baef;
+	background-color: #2d3f4c;
+	border-bottom-style: solid;
+	border-bottom-color: #01baef;
+	background-image: linear-gradient(#1a2329 1%, #0188ae 140%);
+}
+
+nav ul ul ul {
+	left: 100%;
+	top: 0;
+}
+
+
+/* --------- CONTENT ------------*/
+
+#content {
+	margin: 0 auto;
+	width: 1100px;
+	padding: 100px 50px 0 50px;
+	border: 1px solid #e7e7e7;
+	background-color: white;
+}
+
+
+table {
+	width: 900px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+
+article {
+	display: block;
+	width: 250px;
+	padding: 20px;
+	font-weight: bold;
+	font-family: 'Nunito', sans-serif;
+}
+
+article a ul {
+	padding: 0;
+	margin: 0;
+}
+
+article a ul li,
+article a p {
+	list-style-type: none;
+	color: #000000;
+}
+
+article ul {
+	list-style-type: none; 
+	padding: 0;
+	float: left;
+}
+
+.color_select {
+	font-size: 14px;
+}
+
+.buy_btn {
+  background: #0188ae;
+  background-image: -webkit-linear-gradient(top, #0188ae, #b8352c);
+  background-image: -moz-linear-gradient(top, #0188ae, #b8352c);
+  background-image: -ms-linear-gradient(top, #0188ae, #b8352c);
+  background-image: -o-linear-gradient(top, #0188ae, #b8352c);
+  background-image: linear-gradient(to bottom, #0188ae, #1a2329);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 16px;
+  width: 50px;
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  display: block;
+  float: right;
+  margin: 15px 30px 10px 10px;
+}
+
+.buy_btn:hover {
+  background: #1a2329;
+  text-decoration: none;
+}
+
+/* --------- FOOTER ------------*/
+
+footer {
+	/*background-color: #f5f5f5;*/
+	width: 100%;
+	margin: auto;
+}
+
+
+
+#footer_bottom {
+	width: 98%;
+	height: 50px;
+	color: #d8d8da;
+	padding-left: 2%;
+	margin-top: 0px;
+	background-color: #1a2329;
+	float: left;
+	bottom: 0;
+}

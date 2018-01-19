@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html manifest="cache.appcache">
+<head>
+	<title>ALL-IN SPORTS Shop</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Online Sports Shop">
+	<meta name="keywords" content="Nike,Adidas,Puma,Football Cleats,Basketball Shoes,Football Socks,Running Shoes,Football balls,Basketball balls,Accessories ">
+	<meta name="Author" content="Arber Emini,Kujtim Hamiti,Getoar Gaxherri,Begatim Lekaj">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="../JQuery/sticy_menu.js"></script>
+	<script src="../JQuery/dropdown_effect.js"></script>
+	<script src="../Javascript/changeBgTimer.js"></script>
+	<!--        
+        font-family: 'Lato', sans-serif;
+        font-family: 'Source Sans Pro', sans-serif;   
+    -->
+	<script src="../Javascript/computeBMI.js"></script>
+	<link rel="stylesheet" type="text/css" href="../CSS/content.css">
+</head>
+
+<body onload="changeBgTimer(),startGame()">
+	<!--~~~~~~~~~~~~~~~~~~~~~~~Header~~~~~~~~~~~~~~~~~~~~-->
+	<header class="background_t">
+		<div id="login_menu">
+			<p><a href="login.html"><span class="login-btn">Login</span></a> | <a href="register.html"><span class="login-btn">Register</span></a></p>
+		</div>
+		<a href="Index.html"><img id="logo" src="../Images/logo.png" alt="logo" /></a>
+		<form id="search">
+			<div id="searchbardiv">
+				<input id="searchbar" type="search" name="Search" placeholder="Search">
+				<input id="searchbutton" type="button" name="Search" value="Search"> </div>
+		</form>
+	</header>
+	<!--~~~~~~~~~~~~~~~~~~~~MENU~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+	<nav class="background_t">
+		<div id="menudiv">
+			<ul>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li><a href="Index.html">Home</a></li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li class="dropdown">
+					<a href="#0">Football</a>
+					<ul class="sub-menu">
+						<li class="dropdown">
+							<a href="#0">Shoes</a>
+							<ul class="sub-menu">
+								<li><a href="football_shoes_addidas.html">Adidas</a></li>
+								<li><a href="football_shoes_nike.html">Nike</a></li>
+								<li><a href="football_shoes_puma.html">Puma</a></li>
+							</ul>
+						</li>
+						<li> <a href="football_kits.html">Kits</a> </li>
+						<li> <a href="football_accessories.html">Accessories</a></li>
+						<li> <a href="football_balls.html">Balls</a> </li>
+					</ul>
+				</li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li class="dropdown">
+					<a href="#0">Basketball</a>
+					<ul class="sub-menu">
+						<li class="dropdown">
+							<a href="#0">Shoes</a>
+							<ul class="sub-menu"> 
+								<li><a href="baketball_shoes_addidas.html">Adidas</a></li>
+								<li><a href="basketball_shoes_nike.html">Nike</a></li>
+								<li><a href="basketball_shoes_and1.html">AND1</a></li>
+							</ul>
+						</li>
+						<li><a href="basketball_jersyes.html">Jersyes</a></li>
+						<li><a href="basketball_accessories.html">Accessories</a></li>
+						<li><a href="basketball_balls.html">Balls</a></li>
+					</ul>
+				</li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li class="dropdown">
+					<a href="#0">Running</a>
+					<ul class="sub-menu">
+						<li class="dropdown">
+							<a href="#0">Shoes</a>
+							<ul class="sub-menu">
+								<li><a href="running_shoes_addidas.html">Adidas</a></li>
+								<li><a href="running_shoes_nike.html">Nike</a></li>
+								<li><a href="running_shoes_puma.html">Puma</a></li>
+							</ul>
+						</li>
+						<li><a href="running_shorts.html">Shorts</a></li>
+						<li><a href="running_t-shirts.html">T-Shirts</a></li>
+						<li><a href="running_accessories.html">Accessories</a></li>
+					</ul>
+				</li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li class="dropdown">
+					<a href="#0">Supplements</a>
+					<ul class="sub-menu">
+						<li><a href="supplements_whey_proteins.html">Whey Proteins</a></li>
+						<li><a href="supplements_mass_gainer.html">Mass Gainers</a></li>
+						<li><a href="supplements_creatine.html">Creatine</a></li>
+					</ul>
+				</li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li><a href="equipments.html">Equipments</a></li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li><a href="discounts.html">Discounts</a></li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><img src="../Images/Nav/NavLine.png" height="60px" /></li>
+			</ul>
+		</div>
+	</nav>
+	<!--~~~~~~~~~~~~~~~Content~~~~~~~~~~~~~~~~~-->
+	<div id="content" >
+		<h1>Equipments</h1>
+		<h3>Calculate Your Body Mass Index</h3>
+		<p>Body mass index (BMI) is a measure of body fat based on height and weight and age(age can be from 2 to 80).</p>
+		<ul>
+			<li>Enter your weight and height using metric measures.</li>
+			<li>Select "Compute BMI" and your BMI will appear below.</li>
+		</ul>
+		<script>
+			// BMI validation
+			function validateNum() {
+				var x;
+				arrayId = ["height","weight","age"];
+				
+				for( var i = 0; i < arrayId.length; i++) {
+					x = document.getElementById(arrayId[i]).value;
+					if (x == "") {
+						document.getElementById(arrayId[i]).style.boxShadow = "0px 0px 1px 1px red";
+					} else {
+						document.getElementById(arrayId[i]).style.boxShadow = "none";
+						computeBMI(document.getElementById('height').value,document.getElementById('weight').value,document.getElementById('age').value);
+					}
+				}
+			}
+		</script>
+		<form style="margin: 40px 20px;">
+			<p>
+				<label>Your Height (m):</label>
+				<input type="number" name="height" id="height" min="0.5" max="2.5" step="0.1">
+			</p>
+			<p>
+				<label>Your Weight (kg):</label>
+				<input type="number" name="weight" id="weight" min="10" max="150" step="1">
+			</p>
+			<p>
+				<label>Your Age:</label>
+				<input type="number" name="age" id="age" min="2" max="80" step="1">
+			</p>
+			<input type="button" value="Compute BMI" onclick="validateNum()">
+			<p><span id="bmi_result"></p>
+		</form>
+		<video width="800" height="720" controls>
+		  <source src="https://gekkoshot-fitnivideos.s3.amazonaws.com/smaller-treadmills-cat.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+		</video>
+		<style>
+		
+		</style>
+		<script>
+		function allowDrop(ev) {
+			ev.preventDefault();
+		}
+
+		function drag(ev) {
+			ev.dataTransfer.setData("text", ev.target.id);
+		}
+
+		function drop(ev) {
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text");
+			ev.target.appendChild(document.getElementById(data));
+		}
+		</script>
+		<div>
+			<h2>Drag and Drop</h2>
+			<p>Let's do some heavy lifting.</p>
+			<div id="place_holder_1" ondrop="drop(event)" ondragover="allowDrop(event)">
+			  <img src="../Images/weight_lift.png" draggable="true" ondragstart="drag(event)" id="drag1" width="190" height="170">
+			</div>
+			<div id="place_holder_2" src="../Images/weight_lift.png" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		</div>
+		<div style="clear: both; padding-top:20px;">
+			<h2>Manipulation with numbers</h2>
+			<br/>
+			<p>1. Write a number and we will reverse the input!</p>
+			<input type="number" id="num_rev" min="0" max="10000" step="1"> => <span id="reversed_number"></span>
+			<input type="button" id="btn_id" value="Reverse" onclick="reverse()" style="padding: 5px; margin: 10px 0px; display: block;">
+			<br/>
+			<p>2. Write a decimal number: </p><input type="number" id="dec_num" min="0" max="100" step="0.1">
+			<input type="button" id="btn_id" value="Convert To Exponential" onclick="toExp()" style="padding: 5px; margin: 10px 0px; display: block;">
+			<p>Your number converted to exponential is: <span id="exp_num"></span></p>
+			<p>The maximum number allowed is: <span id="max_num"></span></p>
+			<br/>
+			<p id="replace_name">3. Hello, Stranger!</p>
+			<p>If you don't like calling you stranger enter you name and we do the replace.</p>
+			<input type="text" id="visitors_name" placeholder="Your Name">
+			<input type="button" id="btn_id" value="Replace" onclick="replaceStr()" style="padding: 5px; margin: 10px 0px; display: block;">
+			<br/>
+			<p id="match_here">4. In this example We are going to see how many times wE have used the word "WE"!</p>
+			<input type="button" id="btn_id" value="Match" onclick="matchStr()" style="padding: 5px; margin: 10px 0px; display: block;">
+			<p id="matched"></p>
+			<br/>
+			<p>5. Generate math constants, write the number 1 for PI, 2 for euler's number, 3 for square root of 2, 4 for natural logarithm of 2. Give it a try!</p>
+			<input type="number" id="c_num" min="1" max="4" step="1">
+			<input type="button" id="btn_id" value="Generate" onclick="mathC()" style="padding: 5px; margin: 10px 0px; display: block;">
+			<p id="your_constant"></p>
+			<br/>
+			<p>6. Starting and stoping a Web Worker </p>
+			<p>Count numbers: <output id="worker_result"></output></p>
+			<button onclick="startWorker(),clickCounter(),clickCounter2()">Start Worker</button> 
+			<button onclick="stopWorker()" style="background: radial-gradient(red 10%, #0188ae 90%);">Stop Worker</button>
+			<p><output id="local_strg"></output></p>
+			<p><output id="session_strg"></output></p>
+			<script>
+				// 1.  toString() 
+				function reverse() {
+					var x = document.getElementById("num_rev").value;
+					var y = x.toString();
+					var z = y.split("").reverse().join("");
+					var result = Number(z);
+					document.getElementById("reversed_number").innerHTML = result;
+					
+				}
+				// 2.  .toExponential(), MAX_VALUE
+				function toExp() {
+					var x = document.getElementById("dec_num").value;
+					document.getElementById("exp_num").innerHTML = parseFloat(x).toExponential(3);
+					document.getElementById("max_num").innerHTML = Number.MAX_VALUE;
+				}
+				// NaN can be located in the Throw Try Catch example 
+				
+				// 3.  repalce()
+				function replaceStr() {
+					var str = document.getElementById("replace_name").innerHTML;
+					var name = document.getElementById("visitors_name").value;
+					var result = str.replace("Stranger", name);
+					document.getElementById("replace_name").innerHTML = result;
+				}
+				// 4.  match()  g - Global search  i - case insensitive
+				function matchStr() {
+					var str = document.getElementById("match_here").innerHTML;
+					var result = str.match(/we/gi);
+					document.getElementById("matched").innerHTML = result;
+				}
+				// 5.  Switch, Math Constant
+				function mathC() {
+					
+					var constants = document.getElementById("c_num").value;
+					var result;
+					switch(parseInt(constants)) {
+						case 1:
+							result = Math.PI;
+							break;
+						case 2:
+							result = Math.E;
+							break;
+						case 3:
+							result = Math.SQRT2;
+							break;
+						case 4:
+							result = Math.LN2;
+							break;
+						default:
+							result = "Please write e number from 1 to 4!";
+					}
+					
+					document.getElementById("your_constant").innerHTML = result;
+				}
+				// 6.  Web Worker
+				var w;
+				
+				function startWorker() {
+					if(typeof(Worker) !== "undefined") {
+						if(typeof(w) == "undefined") {
+							w = new Worker("worker.js");
+						}
+						w.onmessage = function(event) {
+							document.getElementById("worker_result").innerHTML = event.data;
+						};
+					} else {
+						document.getElementById("worker_result").innerHTML = "Sorry, your browser does not support Web Workers...";
+					}
+				}
+
+				function stopWorker() { 
+					w.terminate();
+					w = undefined;
+				}
+				
+				// localStorage
+				function clickCounter() {
+					if(typeof(Storage) !== "undefined") {
+						if (localStorage.clickcount) {
+							localStorage.clickcount = Number(localStorage.clickcount)+1;
+						} else {
+							localStorage.clickcount = 1;
+						}
+						document.getElementById("local_strg").innerHTML = "You have clicked the button Start " + localStorage.clickcount + " time(s).";
+					} else {
+						document.getElementById("local_strg").innerHTML = "Sorry, your browser does not support web storage...";
+					}
+				}
+				
+				// sessionStorage
+				
+				function clickCounter2() {
+					if(typeof(Storage) !== "undefined") {
+						if (sessionStorage.clickcount) {
+							sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+						} else {
+							sessionStorage.clickcount = 1;
+						}
+						document.getElementById("session_strg").innerHTML = "You have clicked the button Start " + sessionStorage.clickcount + " time(s) in this session.";
+					} else {
+						document.getElementById("session_strg").innerHTML = "Sorry, your browser does not support web storage...";
+					}
+				}
+				
+			</script>
+		</div>
+		<p>7. HTML Game</p>
+		<div id="game_area"></div>
+		<p>TIP: Move the red box over the blue box to win the game.</p>
+		<script>
+			var myGamePiece;
+			var myGamePiece2;
+			
+			function startGame() {
+				myGameArea.start();
+				myGamePiece = new component(30, 30, "red", 10, 120);
+				myGamePiece2 = new component(30, 30, "blue", 235, 56);
+			}
+
+			var myGameArea = {
+				canvas : document.createElement("canvas"),
+				start : function() {
+					this.canvas.width = 480;
+					this.canvas.height = 270;
+					this.context = this.canvas.getContext("2d");
+					document.getElementById("game_area").appendChild(this.canvas);
+					this.interval = setInterval(updateGameArea, 20);
+					window.addEventListener('keydown', function (e) {
+						myGameArea.key = e.keyCode;
+					})
+					window.addEventListener('keyup', function (e) {
+						myGameArea.key = false;
+					})
+				}, 
+				clear : function(){
+					this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+				}
+			}
+
+			function component(width, height, color, x, y) {
+				this.gamearea = myGameArea;
+				this.width = width;
+				this.height = height;
+				this.speedX = 0;
+				this.speedY = 0;    
+				this.x = x;
+				this.y = y;    
+				this.update = function() {
+					ctx = myGameArea.context;
+					ctx.fillStyle = color;
+					ctx.fillRect(this.x, this.y, this.width, this.height);
+				}
+				this.newPos = function() {
+					this.x += this.speedX;
+					this.y += this.speedY;        
+				}
+			}
+
+			function updateGameArea() {
+				myGameArea.clear();
+				myGamePiece.speedX = 0;
+				myGamePiece.speedY = 0;    
+				if (myGameArea.key && myGameArea.key == 37) {myGamePiece.speedX = -1; }
+				if (myGameArea.key && myGameArea.key == 39) {myGamePiece.speedX = 1; }
+				if (myGameArea.key && myGameArea.key == 38) {myGamePiece.speedY = -1; }
+				if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY = 1; }
+				myGamePiece.newPos();    
+				myGamePiece.update();  
+				myGamePiece2.update();
+				
+				if( myGamePiece.x == myGamePiece2.x && myGamePiece.y == myGamePiece2.y ) {
+					alert("Congratz, you won!");
+					startGame();
+				}
+			}
+			// Disable unwanted arrow key scrolling
+			var arrow_keys_handler = function(e) {
+				switch(e.keyCode){
+					case 37: case 39: case 38:  case 40: // Arrow keys
+					case 32: e.preventDefault(); break; // Space
+					default: break; // do not block other keys
+				}
+			};
+			window.addEventListener("keydown", arrow_keys_handler, false);	
+			</script>
+	</div>
+	<!--~~~~~~~~~~~~~~~Footer~~~~~~~~~~~~~~~~~-->
+	<footer>
+		<div id="footer_bottom">
+			<p>Copyright &copy; Sports Shop. Designated trademarks and brands are the property of their respective owners. <span id="date"></span></p>
+			<script>
+				document.getElementById("date").innerHTML = Date();
+			</script>
+		</div>
+	</footer>
+</body>
+
+</html>
